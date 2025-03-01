@@ -1,4 +1,7 @@
-
+---
+layout: default
+title: School Updates
+---
 ### **🏫 School Updates**  
 
 ## **📌 Students' Results - Term 2**  
