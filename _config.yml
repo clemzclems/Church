@@ -1,0 +1,7 @@
+title: "Awake Christian Gospel Ministry Int'l"
+email: "contact@yourchurch.org"
+description: "Official website of Awake Christian Gospel Ministry Int'l"
+baseurl: ""
+url: "https://yourchurch.github.io"  # Change this to your actual GitHub Pages URL
+permalink: /:categories/:title/
+theme: minima  # You can remove this if using full custom HTML
