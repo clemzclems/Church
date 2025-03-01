@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Church Program Advert</title>
+    
+    <!-- Markdown JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.16/marked.min.js"></script> 
+
+    <style>
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    text-align: center;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    background: radial-gradient(circle, aqua, blue, navy);
+    padding: 15px;
+    color: white;
+}
+
+/* Navbar - Centering and Structuring */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Space between logo and text */
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+/* Logo Styling */
+.navbar img {
+    max-width: 80px; /* Adjust the size of the logo */
+    height: auto;
+    border-radius: 50%; /* Makes it rounded if needed */
+}
+
+/* Church Name Styling */
+.navbar h1 {
+    font-size: 24px;
+    margin: 0;
+    text-align: center;
+}
+
+/* Navigation Links */
+.navbar p {
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.navbar a {
+    color: yellow;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 15px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Announcement Bar */
+.scrolling-text {
+    background: crimson;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.scrolling-text div {
+    display: inline-block;
+    animation: scrollText 15s linear infinite;
+}
+
+@keyframes scrollText {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
+        /* Header Styling */
+        header {
+            background: radial-gradient(circle, aqua, blue, navy);
+            padding: 10px;
+            color: white;
+        }
+
+        .navbar a {
+            color: yellow;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Announcement Bar */
+        .scrolling-text {
+            background: crimson;
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .scrolling-text div {
+            display: inline-block;
+            animation: scrollText 15s linear infinite;
+        }
+
+        @keyframes scrollText {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+
+        /* Image Slider */
+        .slider {
+            width: 80%;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        .slides {
+            display: flex;
+            width: 1000%;
+            animation: slide 25s infinite alternate;
+        }
+
+        .slides img {
+            width: 10%;
+            transition: 1s;
+        }
+
+        @keyframes slide {
+            0%, 10% { transform: translateX(0%); }
+            15%, 20% { transform: translateX(-10%); }
+            25%, 30% { transform: translateX(-20%); }
+            35%, 40% { transform: translateX(-30%); }
+            45%, 50% { transform: translateX(-40%); }
+            55%, 60% { transform: translateX(-50%); }
+            65%, 70% { transform: translateX(-60%); }
+            75%, 80% { transform: translateX(-70%); }
+            85%, 90% { transform: translateX(-80%); }
+            95%, 100% { transform: translateX(-90%); }
+        }
+
+        /* Fetch Button */
+        .fetch-btn {
+            background: darkblue;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 20px;
+            transition: 0.3s;
+        }
+
+        .fetch-btn:hover {
+            background: navy;
+        }
+
+        /* Event Section */
+        .event-details {
+            margin: 20px;
+            padding: 15px;
+            background: #fff;
+            box-shadow: 0px 0px 10px gray;
+            border-radius: 10px;
+        }
+
+        /* Markdown Content */
+        #markdown-content {
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px gray;
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        /* Contact Form */
+        .contact-form input, .contact-form textarea {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .contact-form button {
+            background: green;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .contact-form button:hover {
+            background: darkgreen;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <a href="#"><img src="reg.jpg" alt="Church Logo"></a>
+            <h1>🔥 AWAKE CHRISTIAN GOSPEL MINISTRY INT'L 🔥</h1>
+            <p>
+                <a href="#church-section">Church</a> | 
+                <a href="#contact-section">Contact</a>
+            </p>
+        </nav>
+    </header>
+
+    <!-- Scrolling Announcement -->
+    <div class="scrolling-text">
+        <div>🔥 Join Our "MIRACLE & DELIVERANCE NIGHT" - A Night of Transformation! 🔥</div>
+    </div>
+
+    <!-- Fetch Markdown Button -->
+    <button class="fetch-btn" onclick="fetchMarkdown()">Load Program Details</button>
+
+    <!-- Markdown Content -->
+    <div id="markdown-content">
+        <p>Click the button above to load the Markdown file.</p>
+    </div>
+
+    <!-- Image Slider -->
+    <div class="slider">
+        <div class="slides">
+            <img src="church1.jpg" alt="Worship Session">
+            <img src="church2.jpg" alt="Men of God">
+            <img src="church3.jpg" alt="Prayer Time">
+            <img src="church4.jpg" alt="Congregation Worship">
+            <img src="church5.jpg" alt="Anointed Service">
+            <img src="church6.jpg" alt="Holy Gathering">
+            <img src="church7.jpg" alt="Pastor Preaching">
+            <img src="church8.jpg" alt="Praise and Worship">
+            <img src="church9.jpg" alt="Crowd in Worship">
+            <img src="church10.jpg" alt="Youth Fellowship">
+        </div>
+    </div>
+
+    <!-- Church Section -->
+    <section id="church-section" class="event-details">
+        <h2>About Our Church</h2>
+        <p>Awake Christian Gospel Ministry Int'l is a place of worship, prayer, and deliverance. Join us for an encounter with God!</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact-section" class="event-details">
+        <h2>Contact Us</h2>
+        <form action="https://formspree.io/f/mwpvdgeo" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: goldenrod; padding: 10px; color: white;">
+        <p>&copy; 2025 Awake Christian Gospel Ministry Int'l. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Fetching Markdown -->
+    <script>
+        function fetchMarkdown() {
+            fetch('program.md')
+                .then(response => response.text())
+                .then(text => {
+                    document.getElementById('markdown-content').innerHTML = marked.parse(text);
+                })
+                .catch(error => {
+                    document.getElementById('markdown-content').innerHTML = '<p style="color:red;">Failed to load Markdown file.</p>';
+                    console.error('Error fetching Markdown:', error);
+                });
+        }
+    </script>
+
+</body>
+</html>
